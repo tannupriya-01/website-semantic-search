@@ -1,6 +1,21 @@
+<div align="center">
+
 # 🚀 AI-Powered Website Semantic Search Engine
 
-An intelligent semantic search engine that crawls websites, extracts webpage content, stores it in MySQL, generates AI-powered summaries using Google Gemini, builds semantic embeddings with Sentence Transformers, indexes them using FAISS, and provides fast semantic search through a FastAPI backend and React frontend.
+### AI-powered semantic search engine built with FastAPI, React, FAISS, Sentence Transformers, MySQL, and Google Gemini.
+
+An intelligent semantic search engine that crawls websites, extracts webpage content, stores it in MySQL, generates AI-powered summaries using Google Gemini, creates semantic embeddings with Sentence Transformers, indexes them using FAISS, and enables fast semantic retrieval through a FastAPI backend and React frontend.
+
+<br>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/FAISS-FF6F00?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Sentence%20Transformers-0A66C2?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Google%20Gemini-8E75FF?style=for-the-badge"/>
+</div>
 
 ## ✨ Features
 
