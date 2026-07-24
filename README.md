@@ -58,24 +58,44 @@ FastAPI Semantic Search API
 React Search UI
 ```
 
-# 🏗️ System Architecture
+## 🏗️ System Architecture
 
-```
-React Frontend
-       │
-       ▼
-FastAPI Backend
-       │
- ┌──────────────┐
- │              │
- ▼              ▼
-MySQL        FAISS Index
- │              │
- ▼              ▼
-Gemini     Sentence Transformers
-```
+```mermaid
+flowchart TD
 
----
+    subgraph "📥 Data_Ingestion"
+        A[Website URL]
+        B[Sitemap Parser]
+        C[BeautifulSoup]
+        D[Trafilatura]
+        E[Markdown Content]
+        F[(MySQL Database)]
+
+        A --> B
+        B --> C
+        C --> D
+        D --> E
+        E --> F
+    end
+
+    subgraph "🤖 AI Search Pipeline"
+        G[Gemini Summary Generator]
+        H[Page Summaries]
+        I[Sentence Transformers<br/>all-MiniLM-L6-v2]
+        J[FAISS Index]
+        K[FastAPI Semantic Search API]
+        L[React Search UI]
+        M[Semantic Search Results]
+       
+        F --> G
+        G --> H
+        H --> I
+        I --> J
+        J --> K
+        K --> L
+        L --> M
+    end
+```
 
 # ⚙️ Technology Stack
 
