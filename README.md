@@ -114,42 +114,35 @@ flowchart TD
 
 # 📈 Development Journey
 
-### Phase 1 – Website Crawling
+## Phase 1: Website Crawling & Content Storage
 
-- Read sitemap.xml
-- Extract URLs
-- Download HTML pages
-- Parse HTML
-- Convert HTML to Markdown
-- Store content in MySQL
+1. User provides a website URL.
+2. The sitemap (`sitemap.xml`) is parsed using BeautifulSoup.
+3. All webpage URLs are extracted.
+4. HTML content is downloaded.
+5. Trafilatura converts HTML into clean Markdown.
+6. The Markdown content is stored in the `Page_Scrapped` column of MySQL.
 
-### Phase 2 – Backend API
+## Phase 2: AI Summary Generation
 
-- Converted CLI pipeline into FastAPI
-- Exposed REST APIs
-- Tested APIs using Postman
+1. Stored webpage content is fetched from MySQL.
+2. Google Gemini generates concise page summaries.
+3. Summaries are stored back in the database.
 
-### Phase 3 – Code Refactoring
+## Phase 3: Semantic Search Indexing
 
-- Modularized project
-- Improved maintainability
-- No change in functionality
+1. Sentence Transformers (`all-MiniLM-L6-v2`) generate embeddings from the summaries.
+2. Embeddings are indexed using FAISS.
+3. Metadata is linked with every embedding.
 
-### Phase 4 – Semantic Search
+## Phase 4: Semantic Search
 
-- Generated embeddings
-- Built FAISS index
-- Implemented semantic retrieval
-- Added reranking
-- Added keyword highlighting
-
-### Phase 5 – AI Summarization
-
-- Integrated Google Gemini
-- Generated summaries
-- Stored summaries in MySQL
-- Parallelized API calls
-- Switched embeddings from webpage content to summaries
+1. User enters a search query.
+2. The query is converted into an embedding.
+3. FAISS retrieves the most relevant pages.
+4. Results are reranked.
+5. Keywords are highlighted.
+6. Matching pages are displayed through the React interface.
 
 - # 📂 Project Structure
 
