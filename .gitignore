@@ -12,9 +12,16 @@ __pycache__/
 logs/
 *.log
 
+# FAISS index (optional - remove these two lines if you want to upload the index)
+embeddings/faiss.index
+embeddings/metadata.pkl
+
+# Operating System
+.DS_Store
+Thumbs.db
+
 # VS Code
 .vscode/
 
-# OS files
-.DS_Store
-Thumbs.db
+# Python build files
+dist/
