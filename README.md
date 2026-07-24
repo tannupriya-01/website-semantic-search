@@ -18,6 +18,7 @@ An intelligent semantic search engine that crawls websites, extracts webpage con
 
 # 🔄 Complete Project Workflow
 
+```
 Website URL
       │
       ▼
@@ -55,9 +56,11 @@ FastAPI Semantic Search API
       │
       ▼
 React Search UI
+```
 
 # 🏗️ System Architecture
 
+```
 React Frontend
        │
        ▼
@@ -70,6 +73,9 @@ MySQL        FAISS Index
  │              │
  ▼              ▼
 Gemini     Sentence Transformers
+```
+
+---
 
 # ⚙️ Technology Stack
 
@@ -126,7 +132,8 @@ Gemini     Sentence Transformers
 - Switched embeddings from webpage content to summaries
 
 - # 📂 Project Structure
-  
+
+```text
 WebsiteScraper/
 │
 ├── embeddings/
@@ -143,6 +150,7 @@ WebsiteScraper/
 ├── logger.py
 ├── requirements.txt
 └── README.md
+```
 
 # 🚀 Installation
 
